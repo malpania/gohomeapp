@@ -1,0 +1,7 @@
+create_table("customer") {
+  t.Column("id", "integer", {primary: true})
+  t.Column("first_name", "string", {"default": ""})
+  t.Column("last_name", "string", {"default": ""})
+  t.Column("email", "string", {"default": ""})
+  t.Column("access_level", "integer", {"default": 1})
+}

@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: homeapp-go
+  labels:
+    app: homeapp-go
+spec:
+  selector:
+    matchLabels:
+      app: homeapp-go
+  template:
+    metadata:
+      labels:
+        app: homeapp-go
+    spec:
+      containers:
+        - name: homeapp-go
+          image: homeapp-go-image
+          ports:
+            - containerPort: 8000
